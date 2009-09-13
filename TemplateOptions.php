@@ -1,0 +1,2 @@
+<?php
+$templateoptions['swfobject'] = true;

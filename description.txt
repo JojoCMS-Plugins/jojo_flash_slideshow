@@ -1,0 +1,1 @@
+A Flash based slideshow, managed via a database.
