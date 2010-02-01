@@ -39,7 +39,7 @@ $data = Jojo::selectQuery("UPDATE {page} SET pg_link='jojo_flash_slideshow' WHER
 $data = Jojo::selectQuery("SELECT * FROM {page} WHERE pg_link='jojo_flash_slideshow'");
 if (count($data) == 0) {
     echo "Adding <b>jojo_flash_slideshow</b> Page to menu<br />";
-    Jojo::insertQuery("INSERT INTO {page} SET pg_title='Flash Slideshow', pg_link='Jojo_Plugin_jojo_flash_slideshow', pg_url='flashslideshow.xml.php', pg_mainnav='no', pg_parent = ?", array($_NOT_NO_MENU_ID));
+    Jojo::insertQuery("INSERT INTO {page} SET pg_title='Flash Slideshow', pg_link='Jojo_Plugin_jojo_flash_slideshow', pg_url='flashslideshow.xml.php', pg_mainnav='no', pg_parent = ?", array($_NOT_ON_MENU_ID));
 }
 
 // Edit Flash Slideshow
