@@ -34,9 +34,10 @@ if (!Jojo::tableexists('flashslideshow')) {
 }
 
 // Flash slide show xml
-$data = Jojo::selectQuery("UPDATE {page} SET pg_link='jojo_flash_slideshow' WHERE pg_link='Jojo_Plugin_jojo_flash_slideshow.php'");
+$data = Jojo::selectQuery("UPDATE {page} SET pg_link='JOJO_Plugin_Jojo_flash_slideshow' WHERE pg_link='Jojo_Plugin_jojo_flash_slideshow.php'");
+$data = Jojo::selectQuery("UPDATE {page} SET pg_link='JOJO_Plugin_Jojo_flash_slideshow' WHERE pg_link='jojo_flash_slideshow'");
 
-$data = Jojo::selectQuery("SELECT * FROM {page} WHERE pg_link='jojo_flash_slideshow'");
+$data = Jojo::selectQuery("SELECT * FROM {page} WHERE pg_link='JOJO_Plugin_Jojo_flash_slideshow'");
 if (count($data) == 0) {
     echo "Adding <b>jojo_flash_slideshow</b> Page to menu<br />";
     Jojo::insertQuery("INSERT INTO {page} SET pg_title='Flash Slideshow', pg_link='Jojo_Plugin_jojo_flash_slideshow', pg_url='flashslideshow.xml.php', pg_mainnav='no', pg_parent = ?", array($_NOT_ON_MENU_ID));
